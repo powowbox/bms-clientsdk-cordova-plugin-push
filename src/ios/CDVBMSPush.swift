@@ -420,10 +420,8 @@ import UserNotificationsUI
     }
 
     func didReceiveRemoteNotification(notification: NSDictionary?) {
-        
-        // FIXME SPI 17/10/2017 fix crashlylicts #3. Don't need this code since the remote push is disabled in 1.0.24
 
-       /* var notif: [String : AnyObject] = [:]
+        var notif: [String : AnyObject] = [:]
         notif["message"] = ((notification?.value(forKey: "aps") as! NSDictionary).value(forKey: "alert") as! NSDictionary).value(forKey: "body") as AnyObject?
 
         notif["payload"] = notification?.value(forKey: "payload") as AnyObject?
@@ -454,7 +452,7 @@ import UserNotificationsUI
                 CDVBMSPush.sharedInstance.notifCommandDelegate!.send(pluginResult, callbackId:self.notifCallbackId)
             }
 
-        })*/
+        })
     }
 
     func hasPushEnabled() -> Bool {
